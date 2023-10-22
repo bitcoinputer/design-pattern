@@ -1,4 +1,4 @@
-// Step 1: Observer Interface
+// Step 1: Observer & Subject Interface
 interface Observer {
   update(steps: number, heartRate: number, sleep: number): void;
 }
@@ -42,7 +42,7 @@ class FitnessTracker implements Subject {
   }
 }
 
-// SmartWatch class implementing Observer
+// Step 3: SmartWatch and Mobile App class implementing Observer
 class SmartWatch implements Observer {
   update(steps: number, heartRate: number, sleep: number): void {
     console.log(
@@ -60,7 +60,7 @@ class MobileApp implements Observer {
   }
 }
 
-// Step 3: Usage
+// Step 4: Usage
 const fitnessTracker = new FitnessTracker();
 const smartWatch = new SmartWatch();
 const mobileApp = new MobileApp();
